@@ -6,8 +6,11 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -22,6 +25,7 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 
 	private FragmentManager mFragmentManager;
 	private RadioGroup mRg_tab;
+	private int pageNumber = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +46,42 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 	}
 
 	private void initData() {
-		// TODO Auto-generated method stub
+		SharedPreferences sp = this.getSharedPreferences("config", MODE_PRIVATE);
+		Editor mEditor = sp.edit();
+		mEditor.putInt("pageNumber", pageNumber);
+		int id = sp.getInt("pageNumber", 1);
+		showPreviousPage(id);
+	}
 
+	/**
+	 * 显示上次退出时的页面
+	 * 
+	 * @param id
+	 */
+	private void showPreviousPage(int id) {
+		RadioButton mRb_show = null;
+		switch (id) {
+		case 1:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_home);
+			break;
+		case 2:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_message);
+			break;
+		case 3:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_me);
+			break;
+		case 4:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_discover);
+			break;
+		case 5:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_more);
+			break;
+		default:
+			mRb_show = (RadioButton) findViewById(R.id.cgt_rb_home);
+			break;
+		}
+		mRb_show.setChecked(true);
+		ShowFragmen(id);
 	}
 
 	@Override

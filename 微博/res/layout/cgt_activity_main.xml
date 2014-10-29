@@ -22,32 +22,31 @@
         <RadioButton
             android:id="@+id/cgt_rb_home"
             style="@style/cgt_tabbar"
-            android:checked="true"
-            android:drawableTop="@drawable/cgt_tabbar_home_nor"
+            android:drawableTop="@drawable/cgt_selector_tabbar_home_bg"
             android:text="@string/cgt_tabbar_home" />
 
         <RadioButton
             android:id="@+id/cgt_rb_message"
             style="@style/cgt_tabbar"
-            android:drawableTop="@drawable/cgt_tabbar_message_nor"
+            android:drawableTop="@drawable/cgt_selector_tabbar_message_bg"
             android:text="@string/cgt_tabbar_message" />
 
         <RadioButton
             android:id="@+id/cgt_rb_me"
             style="@style/cgt_tabbar"
-            android:drawableTop="@drawable/cgt_tabbar_me_nor"
+            android:drawableTop="@drawable/cgt_selector_tabbar_me_bg"
             android:text="@string/cgt_tabbar_me" />
 
         <RadioButton
             android:id="@+id/cgt_rb_discover"
             style="@style/cgt_tabbar"
-            android:drawableTop="@drawable/cgt_tabbar_discover_nor"
+            android:drawableTop="@drawable/cgt_selector_tabbar_discover_bg"
             android:text="@string/cgt_tabbar_discover" />
 
         <RadioButton
             android:id="@+id/cgt_rb_more"
             style="@style/cgt_tabbar"
-            android:drawableTop="@drawable/cgt_tabbar_more_nor"
+            android:drawableTop="@drawable/cgt_selector_tabbar_more_bg"
             android:text="@string/cgt_tabbar_more" />
     </RadioGroup>
 
