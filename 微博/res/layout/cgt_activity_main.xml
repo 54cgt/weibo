@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/cgt_fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/cgt_rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_404040"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/cgt_rb_home"
+            style="@style/cgt_tabbar"
+            android:drawableTop="@drawable/cgt_tabbar_home_nor"
+            android:text="@string/cgt_tabbar_home" />
+
+        <RadioButton
+            android:id="@+id/cgt_rb_message"
+            style="@style/cgt_tabbar"
+            android:drawableTop="@drawable/cgt_tabbar_message_nor"
+            android:text="@string/cgt_tabbar_message" />
+
+        <RadioButton
+            android:id="@+id/cgt_rb_me"
+            style="@style/cgt_tabbar"
+            android:drawableTop="@drawable/cgt_tabbar_me_nor"
+            android:text="@string/cgt_tabbar_me" />
+
+        <RadioButton
+            android:id="@+id/cgt_rb_discover"
+            style="@style/cgt_tabbar"
+            android:drawableTop="@drawable/cgt_tabbar_discover_nor"
+            android:text="@string/cgt_tabbar_discover" />
+
+        <RadioButton
+            android:id="@+id/cgt_rb_more"
+            style="@style/cgt_tabbar"
+            android:drawableTop="@drawable/cgt_tabbar_more_nor"
+            android:text="@string/cgt_tabbar_more" />
+    </RadioGroup>
+
+</LinearLayout>
