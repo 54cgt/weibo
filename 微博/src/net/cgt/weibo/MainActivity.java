@@ -70,6 +70,15 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 			break;
 		}
 
+		ShowFragmen(id);
+	}
+
+	/**
+	 * 显示Fragment页面
+	 * 
+	 * @param id
+	 */
+	private void ShowFragmen(int id) {
 		FragmentTransaction transaction = mFragmentManager.beginTransaction();
 		Fragment fragment = FragmentFactory.getInstanceByIndex(id);
 		transaction.replace(R.id.cgt_fl_content, fragment);
