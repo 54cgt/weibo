@@ -1,4 +1,4 @@
-package net.cgt.weibo.factory;
+package net.cgt.weibo.fragment;
 
 import net.cgt.weibo.R;
 import android.annotation.TargetApi;

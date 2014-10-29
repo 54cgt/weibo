@@ -1,4 +1,4 @@
-package net.cgt.weibo.factory;
+package net.cgt.weibo.fragment;
 
 /**
  * 我页面

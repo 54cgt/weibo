@@ -1,5 +1,10 @@
 package net.cgt.weibo.factory;
 
+import net.cgt.weibo.fragment.DiscoverFragment;
+import net.cgt.weibo.fragment.HomeFragment;
+import net.cgt.weibo.fragment.MeFragment;
+import net.cgt.weibo.fragment.MessageFragment;
+import net.cgt.weibo.fragment.MoreFragment;
 import android.app.Fragment;
 
 /**
